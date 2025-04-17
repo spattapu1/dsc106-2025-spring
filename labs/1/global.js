@@ -23,12 +23,14 @@ document.body.insertAdjacentHTML(
     </select>
   </label>`,
 );
+
 const select = document.querySelector('label.color-scheme select');
 select.addEventListener('input', function (event) {
   console.log('color scheme changed to', event.target.value);
   document.documentElement.style.setProperty('color-scheme', event.target.value);
   localStorage.colorScheme = event.target.value;
 });
+
 if (localStorage.colorScheme){
   const savedScheme = localStorage.colorScheme;
   document.documentElement.style.setProperty('color-scheme', savedScheme);
@@ -37,6 +39,7 @@ if (localStorage.colorScheme){
   document.documentElement.style.setProperty('color-scheme', 'light dark');
   select.value = 'light dark';
 }
+
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
@@ -51,7 +54,7 @@ let pages = [
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
-  : "/website/";    
+  : "/dsc106-2025-spring/labs/1/";    
 
 for (let p of pages) {
   let url = p.url;
