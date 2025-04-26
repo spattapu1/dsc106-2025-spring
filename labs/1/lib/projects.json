@@ -1,62 +1,74 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni est, deserunt enim saepe consequuntur sequi necessitatibus provident ipsa, harum hic, molestias ab! Quas, voluptas? Ipsa, incidunt! Ullam officia nesciunt voluptatem?"
+        "title": "Expository Visualization",
+        "image": "images/project1.png",
+        "year": "2025",
+        "description": "Are Generic Brands actually cheaper? This project aims to visualize the price differences between generic and brand-name products a few categories accross 3 major U.S Supermarket Giants. The goal is to provide a clear and informative representation of the data, allowing users to easily compare prices and make informed decisions."
     },
     {
         "title": "Facilis reprehenderit commodi fuga.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2023",
         "description": "Ullam dolore voluptate optio labore suscipit reiciendis, tenetur quaerat eveniet dolores. Corrupti in, fuga eos, saepe eveniet cumque velit dolorem aut magni, aliquam ea? Quibusdam consequatur earum quasi accusamus itaque."
     },
     {
         "title": "Vero atque voluptatum asperiores!",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2022",
         "description": "Quaerat explicabo veniam tempore, perspiciatis doloremque quis atque repellat soluta tempora ab ipsum mollitia deserunt impedit odio debitis. Autem qui voluptatibus numquam amet exercitationem excepturi fugiat facere quaerat est adipisci."
     },
     {
         "title": "Tenetur, atque incidunt. Ad?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2024",
         "description": "Minus doloremque ipsum eaque consectetur in suscipit voluptatem est quo, neque nihil minima! Aperiam nostrum placeat expedita tempore debitis iure quis porro exercitationem eius! Eos nulla qui harum rerum molestiae!"
     },
     {
         "title": "Optio ea neque molestiae?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2023",
         "description": "Temporibus culpa libero deleniti perferendis? Quas fugiat, necessitatibus voluptates vero suscipit ducimus in. Omnis perferendis repellendus totam illo ipsam, deleniti quos dignissimos tenetur sapiente ullam, placeat vero. Consectetur, veniam non."
     },
     {
         "title": "Velit maxime consequatur doloribus!",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2024",
         "description": "Maxime harum debitis, veniam mollitia repellendus error omnis inventore vero nobis delectus modi ad sed iusto ipsum voluptate incidunt odio facilis, ipsa reiciendis dolor. Nihil maxime numquam facilis aliquid eos."
     },
     {
         "title": "Ex, fugit fugiat. Et.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2025",
         "description": "Odio delectus iure, iste veritatis ea cum est voluptas quod voluptatibus cupiditate reprehenderit! Velit libero dignissimos laudantium accusantium doloremque rem tempore labore iste, reiciendis laborum eveniet corporis esse! Cumque, voluptate!"
     },
     {
         "title": "Animi aspernatur eum dolores.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2023",
         "description": "Reprehenderit consequuntur sit tempore omnis quod aliquam voluptatibus architecto et numquam alias, iste quaerat voluptatem nemo aliquid dicta laborum placeat animi temporibus labore nam aspernatur iusto eaque doloremque repudiandae? Minus?"
     },
     {
         "title": "Repellat, fugit? Sequi, illum?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2022",
         "description": "Distinctio debitis totam consequatur culpa quaerat officiis, libero tempora quo quasi harum, voluptates nostrum consequuntur assumenda quas magnam iste in soluta, similique deleniti explicabo. Voluptatem eos eaque voluptatum. Autem, exercitationem."
     },
     {
         "title": "Quam amet nihil totam?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2024",
         "description": "Numquam maiores mollitia in ducimus assumenda eos esse vel fugiat maxime? Alias consequatur beatae est. Expedita, maiores? Libero cum, minus est totam commodi qui error aut beatae sunt eaque nam?"
     },
     {
         "title": "Porro eligendi possimus voluptate.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2024",
         "description": "Culpa ducimus fuga sed similique voluptatibus voluptate ratione commodi perspiciatis, unde, quisquam, sint sapiente vel. Voluptate laudantium optio doloremque repudiandae! Cum molestiae, provident quia ea laudantium velit accusantium distinctio quas?"
     },
     {
         "title": "Quae culpa aliquam facere.",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "year": "2025",
         "description": "Non animi pariatur sapiente ipsam voluptas temporibus sunt fugiat assumenda enim hic voluptatem aut minus ullam dolor doloremque mollitia, amet a porro aliquam! Iure illo tenetur reprehenderit possimus rem distinctio!"
     }
 ]
