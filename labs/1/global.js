@@ -118,6 +118,5 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     // Append the article to the container
     containerElement.appendChild(article);
   }
-  window.renderProjects = renderProjects;
 }
 
