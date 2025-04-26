@@ -109,6 +109,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     img.src = project.image.startsWith('http')
     ? project.image
     : BASE_PATH + project.image;
+    
     img.alt = project.title;
 
     // Create a paragraph
