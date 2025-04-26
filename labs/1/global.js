@@ -87,6 +87,9 @@ export async function fetchJSON(url) {
 }
 
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+    ? "/labs/1/" 
+    : "/dsc106-2025-spring/labs/1/";
   // Clear the container
   containerElement.innerHTML = '';
 
@@ -103,7 +106,9 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
     // Create an image
     const img = document.createElement('img');
-    img.src = project.image;
+    img.src = project.image.startsWith('http')
+    ? project.image
+    : BASE_PATH + project.image;
     img.alt = project.title;
 
     // Create a paragraph
