@@ -1,16 +1,8 @@
-console.log('IT’S ALIVE!');
 
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-// navLinks = $$('nav a');
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname,
-// );
-// if (currentLink) {
-//   currentLink.classList.add('current');
-// }
 document.body.insertAdjacentHTML(
   'afterbegin',
   `
@@ -53,7 +45,7 @@ let pages = [
 
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"                  // Local server
+  ? "/labs/1/" 
   : "/dsc106-2025-spring/labs/1/";    
 
 for (let p of pages) {
@@ -78,3 +70,53 @@ for (let p of pages) {
   );
 
 }
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    console.log(response)
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  // Clear the container
+  containerElement.innerHTML = '';
+
+  // Loop through each project
+  for (let i = 0; i < projects.length; i++) {
+    const project = projects[i]; // ✅ fix: use projects[i]
+
+    // Create article
+    const article = document.createElement('article');
+
+    // Create a dynamic heading
+    const heading = document.createElement(headingLevel);
+    heading.textContent = project.title;
+
+    // Create an image
+    const img = document.createElement('img');
+    img.src = project.image;
+    img.alt = project.title;
+
+    // Create a paragraph
+    const description = document.createElement('p');
+    description.textContent = project.description;
+
+    // Append heading, image, and description to the article
+    article.appendChild(heading);
+    article.appendChild(img);
+    article.appendChild(description);
+
+    // Append the article to the container
+    containerElement.appendChild(article);
+  }
+}
+
