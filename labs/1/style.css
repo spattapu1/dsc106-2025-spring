@@ -155,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.5;
 }
 .selected {
-  --color: oklch(60% 0.45 0) !important; /* Fixed color syntax: spaces required */
+  --color: oklch(0.67 0.1431 347.69) !important; /* Fixed color syntax: spaces required */
 }
 path.selected {
   --color: var(--color);
