@@ -85,45 +85,30 @@ export async function fetchJSON(url) {
     console.error('Error fetching or parsing JSON data:', error);
   }
 }
-
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-    ? "/labs/1/" 
+    ? "/labs/1/"
     : "/dsc106-2025-spring/labs/1/";
-  // Clear the container
-  containerElement.innerHTML = '';
 
-  // Loop through each project
+  let html = '';
+
   for (let i = 0; i < projects.length; i++) {
-    const project = projects[i]; // ✅ fix: use projects[i]
+    const project = projects[i];
+    const imageSrc = project.image.startsWith('http')
+      ? project.image
+      : BASE_PATH + project.image;
 
-    // Create article
-    const article = document.createElement('article');
+      html += `
+      <article>
+        <${headingLevel}>${project.title}</${headingLevel}>
+        <img src="${imageSrc}" alt="${project.title}">
+        <p>${project.description} <br>c. ${project.year}</p>
 
-    // Create a dynamic heading
-    const heading = document.createElement(headingLevel);
-    heading.textContent = project.title;
-
-    // Create an image
-    const img = document.createElement('img');
-    img.src = project.image.startsWith('http')
-    ? project.image
-    : BASE_PATH + project.image;
-    
-    img.alt = project.title;
-
-    // Create a paragraph
-    const description = document.createElement('p');
-    description.textContent = project.description;
-
-    // Append heading, image, and description to the article
-    article.appendChild(heading);
-    article.appendChild(img);
-    article.appendChild(description);
-
-    // Append the article to the container
-    containerElement.appendChild(article);
+      </article>
+    `;
   }
+
+  containerElement.innerHTML = html;
 }
 export async function fetchGitHubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);
