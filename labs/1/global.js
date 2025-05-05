@@ -36,15 +36,15 @@ let nav = document.createElement('nav');
 document.body.prepend(nav);
 
 let pages = [
-  { url: '/labs/1/', title: 'Home' },
-  { url: '/labs/1/projects/', title: 'Projects' },
-  { url: '/labs/1/resume/', title: 'Resume' },
-  { url: '/labs/1/contact/', title: 'Contact' },
+  { url: '/', title: 'Home' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'resume/', title: 'Resume' },
+  { url: 'contact/', title: 'Contact' },
   { url: 'https://github.com/spattapu1', title: 'GitHub' }];
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/labs/1/" 
-  : "/dsc106-2025-spring/labs/1/";    
+  : "/dsc106-2025-spring/";    
 
 for (let p of pages) {
   let url = p.url;
