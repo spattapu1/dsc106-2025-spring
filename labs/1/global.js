@@ -36,10 +36,10 @@ let nav = document.createElement('nav');
 document.body.prepend(nav);
 
 let pages = [
-  { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
-  { url: 'resume/', title: 'Resume' },
-  { url: 'contact/', title: 'Contact' },
+  { url: './', title: 'Home' },
+  { url: './projects/', title: 'Projects' },
+  { url: './resume/', title: 'Resume' },
+  { url: './contact/', title: 'Contact' },
   { url: 'https://github.com/spattapu1', title: 'GitHub' },
 ];
 
