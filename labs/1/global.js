@@ -37,14 +37,14 @@ document.body.prepend(nav);
 
 let pages = [
   { url: '', title: 'Home' },
-  { url: './projects/', title: 'Projects' },
-  { url: './resume/', title: 'Resume' },
-  { url: './contact/', title: 'Contact' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'resume/', title: 'Resume' },
+  { url: 'contact/', title: 'Contact' },
   { url: 'https://github.com/spattapu1', title: 'GitHub' }];
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/labs/1/" 
-  : "/dsc106-2025-spring/";    
+  : "/dsc106-2025-spring/labs/1/";    
 
 for (let p of pages) {
   let url = p.url;
