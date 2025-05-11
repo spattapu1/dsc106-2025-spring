@@ -1,6 +1,8 @@
 :root {
-  --color-accent: oklch(80% 3% 200);  /* A specific accent color */
-  accent-color: var(--color-accent); /* Ensure form elements inherit the accent color */
+  --color-accent: oklch(80% 3% 200); /* A specific accent color */
+  accent-color: var(
+    --color-accent
+  ); /* Ensure form elements inherit the accent color */
 }
 html {
   color-scheme: light dark;
@@ -8,22 +10,21 @@ html {
 body {
   max-width: 100ch;
   margin-inline: auto;
-  padding: 1rem; 
+  padding: 1rem;
   font: 100%/1.5 system-ui;
-  }
+}
 nav {
   display: flex;
   --border-color: oklch(80% 3% 200 / 40%);
   --background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
-
 }
-label.color-scheme{
+label.color-scheme {
   position: absolute;
   top: 1rem; /* Distance from the top edge of the page */
   right: 1rem; /* Distance from the right edge of the page */
   font-size: 80%; /* Makes the font a bit smaller */
   font-family: inherit; /* Inherits the font family from the parent */
-} 
+}
 nav a {
   flex: 1;
   text-decoration: none;
@@ -41,27 +42,27 @@ nav a.current {
 nav a:hover {
   background-color: var(--background-color);
   border-bottom: 0.4em solid var(--color-accent);
-  padding-bottom: 0.6em; 
+  padding-bottom: 0.6em;
 }
-form{
+form {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1em;
 }
-label{
+label {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
 }
-button{
+button {
   grid-column: 1 / -1;
 }
-.projects{
+.projects {
   display: grid;
-  grid-template-columns:repeat(auto-fill, minmax(15em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1.5em;
 }
-.projects article{
+.projects article {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
@@ -72,7 +73,12 @@ button{
 h1 {
   font-size: 400%;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
   text-wrap: balance;
 }
@@ -91,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 .resume .item-details {
   max-width: 800px;
 }
-.profile{
+.profile {
   display: flex;
   align-items: flex-start;
   gap: 2em;
@@ -116,12 +122,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .stats-box dt {
   grid-row: 1;
+  text-transform: uppercase;
 }
 
 .stats-box dd {
   margin: 0;
   grid-row: 2;
+  font-size: 2rem;
   padding: 0.5rem;
+  text-transform: uppercase;
 }
 .projects {
   display: grid;
@@ -135,7 +144,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 200px;
   object-fit: cover;
   border-radius: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: block;
 }
 
@@ -155,7 +166,9 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.5;
 }
 .selected {
-  --color: oklch(0.67 0.1431 347.69) !important; /* Fixed color syntax: spaces required */
+  --color: oklch(
+    0.67 0.1431 347.69
+  ) !important; /* Fixed color syntax: spaces required */
 }
 path.selected {
   --color: var(--color);
@@ -166,13 +179,13 @@ path {
   transition: fill 0.3s ease;
 }
 .swatch {
-  width: 1em;                      /* fixed width */
-  height: 1em;                     /* fixed height */
-  aspect-ratio: 1 / 1;             /* makes it square if one dimension is missing */
+  width: 1em; /* fixed width */
+  height: 1em; /* fixed height */
+  aspect-ratio: 1 / 1; /* makes it square if one dimension is missing */
   background-color: var(--color); /* use dynamic color from JS */
-  border-radius: 0.50em;           /* slight rounding (change to 50% for full circle) */
-  display: inline-block;           /* crucial for width/height to apply */
-  margin-right: 0.5em;             /* space before the label text */
+  border-radius: 0.5em; /* slight rounding (change to 50% for full circle) */
+  display: inline-block; /* crucial for width/height to apply */
+  margin-right: 0.5em; /* space before the label text */
 }
 .legend-item .swatch {
   background-color: var(--color);
@@ -181,7 +194,7 @@ path {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
-  gap: 1em;                     /* larger gap between grid cells */
+  gap: 1em; /* larger gap between grid cells */
   list-style: none;
   padding: 1em;
   margin: 0;
@@ -191,7 +204,7 @@ path {
   opacity: 1;
   font-weight: bold;
 }
-.container{
+.container {
   display: flex;
   align-items: center;
   gap: 3.5em;
@@ -204,8 +217,55 @@ path {
   font-family: inherit;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 0.75em center;
+  background: url("https://cdn-icons-png.flaticon.com/512/622/622669.png")
+    no-repeat 0.75em center;
   background-size: 1em;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+dl.info{
+  display: grid;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+.tooltip{
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+circle.selected {
+  fill: #ff6b6b;
+}
+#language-breakdown {
+  display: grid;
+  align-items: center;
 }

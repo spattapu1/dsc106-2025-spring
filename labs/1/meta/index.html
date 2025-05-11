@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Meta D3 Visualization</title>
+</head>
+<body>
+    <h1>Meta</h1>
+    <h2>Summary</h2>
+    <div id="stats" class="stats-box"></div>
+    <h2>Commits by Time of Day</h2>
+    <div id="chart"></div>
+    <dl id="commit-tooltip" class="info tooltip" hidden>
+            <dt>Commit</dt>
+            <dd>
+              <a href="" id="commit-link" target="_blank"></a>
+            </dd>
+          
+            <dt>Date</dt>
+            <dd id="commit-date"></dd>
+          
+            <!-- Add: Time, author, lines edited -->
+          </dl>
+    <!-- Import main.js -->
+    <script type="module" src="main.js"></script>
+    <script src="../global.js" type="module"></script>
+    <h2 id="selection-count">No commits selected</h2>
+    <dl id="language-breakdown" class="stats-box"></dl>
+
+</body>
+</html>
+
+
