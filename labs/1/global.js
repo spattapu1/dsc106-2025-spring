@@ -103,12 +103,15 @@ export function renderProjects(
       ? project.image
       : BASE_PATH + project.image;
 
+    const linkHref = project.url === "" ? imageSrc : project.url;
+
     html += `
       <article>
         <${headingLevel}>${project.title}</${headingLevel}>
-        <img src="${imageSrc}" alt="${project.title}">
+        <a href="${linkHref}" target="_blank">
+          <img src="${imageSrc}" alt="${project.title}">
+        </a>
         <p>${project.description} <br>c. ${project.year}</p>
-
       </article>
     `;
   }

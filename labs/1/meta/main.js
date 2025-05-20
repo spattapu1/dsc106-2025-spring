@@ -220,7 +220,7 @@ async function loadData() {
     const countElement = document.querySelector('#selection-count');
     countElement.textContent = `${
       selectedCommits.length || 'No'
-    } commits selected`;
+    } Commits Selected`;
   
     return selectedCommits;
   }

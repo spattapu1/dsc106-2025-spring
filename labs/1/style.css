@@ -101,17 +101,22 @@ h6 {
   display: flex;
   align-items: flex-start;
   gap: 2em;
-  margin-bottom: 2em;
+  margin: 4em 0;
+  padding: 2em;
+}
+.profile-details {
+  max-width: 720px;
+}
+.profile-details h2{
+  font:Exile;
 }
 .profile-image {
-  width: 400px;
-  height: auto;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   object-fit: cover;
 }
-.profile-details {
-  max-width: 800px;
-}
+
 .stats-box dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
@@ -119,7 +124,6 @@ h6 {
   margin-top: 2rem;
   text-align: center;
 }
-
 .stats-box dt {
   grid-row: 1;
   text-transform: uppercase;
