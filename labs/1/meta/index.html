@@ -9,25 +9,47 @@
 <body>
     <h1>Meta</h1>
     <h2>Summary</h2>
-    <div id="stats" class="stats-box"></div>
-    <h2>Commits by Time of Day</h2>
-    <div id="chart"></div>
-    <dl id="commit-tooltip" class="info tooltip" hidden>
-            <dt>Commit</dt>
-            <dd>
-              <a href="" id="commit-link" target="_blank"></a>
-            </dd>
-          
-            <dt>Date</dt>
-            <dd id="commit-date"></dd>
-          
-            <!-- Add: Time, author, lines edited -->
-          </dl>
+    <div style="display: flex; align-items: baseline;">
+      <label>Show commits until:</label>
+      <input type="range" id="commit-progress" min="0" max="100">
+      <time id="commit-time" style="margin-left: auto;"></time>
+    </div>
+
+    
+    <div id="scrolly-1">
+    <div id="scatter-story">some filler text here</div>
+    <div id="scatter-plot">
+      <div id="stats" class="stats-box"></div>
+      <h2>Commits by Time of Day</h2>
+      <div id="chart"></div>
+      <dl id="commit-tooltip" class="info tooltip" hidden>
+              <dt>Commit</dt>
+              <dd>
+                <a href="" id="commit-link" target="_blank"></a>
+              </dd>
+            
+              <dt>Date</dt>
+              <dd id="commit-date"></dd>
+            
+              <!-- Add: Time, author, lines edited -->
+            </dl>
+        </div>
+  </div>
     <!-- Import main.js -->
     <script type="module" src="main.js"></script>
     <script src="../global.js" type="module"></script>
     <h2 id="selection-count">No commits selected</h2>
     <dl id="language-breakdown" class="stats-box"></dl>
+    <dl id="files">
+      <!-- we want the following structure for each file:
+      <div>
+        <dt>
+          <code>{file.name}</code>
+        </dt>
+        <dd>{file.lines.length} lines</dd>
+      </div>
+      -->
+    </dl>
 
 </body>
 </html>
