@@ -404,6 +404,7 @@ function updateFileDisplay(filteredCommits){
   .join('div')
   .attr('class', 'loc')
   .attr('style', (d) => `--color: ${colors(d.type)}`);
+
 }
 
 function onTimeSliderChange(event) {
@@ -414,6 +415,7 @@ function onTimeSliderChange(event) {
   updateScatterPlot(data, filteredCommits);
   updateFileDisplay(filteredCommits);
 }
+
 d3.select('#scatter-story')
   .selectAll('.step')
   .data(commits)
@@ -444,8 +446,7 @@ d3.select('#scatter-story')
   commitMaxTime = response.element.__data__.datetime;
   filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
-  updateFileDisplay(filteredCommits);
-  // Update stats with filtered data
+  updateFileDisplay(filteredCommits)
   renderCommitInfo(filteredCommits.flatMap(d => d.lines), filteredCommits);
 }
 
